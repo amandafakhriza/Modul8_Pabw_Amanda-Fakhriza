@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tambah Buku</title>
+</head>
+<body>
+
+    <h2>Tambah Data Buku</h2>
+
+    <form action="{{ route('buku.store') }}" method="POST">
+        @csrf
+
+        <label>Judul Buku</label><br>
+        <input type="text" name="judul" value="{{ old('judul') }}" required>
+        <br><br>
+
+        <label>Penulis</label><br>
+        <input type="text" name="penulis" value="{{ old('penulis') }}" required>
+        <br><br>
+
+        <label>Penerbit</label><br>
+        <input type="text" name="penerbit" value="{{ old('penerbit') }}" required>
+        <br><br>
+
+        <label>Tahun Terbit</label><br>
+        <input type="number" name="tahun_terbit" value="{{ old('tahun_terbit') }}" required>
+        <br><br>
+
+        <label>Stok</label><br>
+        <input type="number" name="stok" value="{{ old('stok', 0) }}" min="0" required>
+        <br><br>
+
+        <button type="submit">Simpan</button>
+        <a href="{{ route('buku.index') }}">Kembali</a>
+    </form>
+
+    @if($errors->any())
+        <ul style="color:red;">
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    @endif
+
+</body>
+</html>

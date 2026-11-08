@@ -1,0 +1,31 @@
+{
+    "name": "nwidart/buku",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+    "psr-4": {
+        "Modules\\Buku\\": "",
+        "Modules\\Buku\\App\\": "App/",
+        "Modules\\Buku\\Database\\Factories\\": "Database/Factories/",
+        "Modules\\Buku\\Database\\Seeders\\": "Database/Seeders/"
+    }
+},
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Buku\\Tests\\": "tests/"
+        }
+    }
+}

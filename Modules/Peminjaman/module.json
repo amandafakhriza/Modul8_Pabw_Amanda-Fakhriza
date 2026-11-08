@@ -1,0 +1,11 @@
+{
+    "name": "Peminjaman",
+    "alias": "peminjaman",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Peminjaman\\App\\Providers\\PeminjamanServiceProvider"
+    ],
+    "files": []
+}
